@@ -13,7 +13,7 @@ export class AuthService {
       .map(response => {
         let result = response.json();
         if (result && result.token) {
-          localStorage.setItem("token", result.token);
+          localStorage.setItem('token', result.token);
           return true;
         }
         return false;
@@ -21,6 +21,7 @@ export class AuthService {
   }
 
   logout() {
+    localStorage.removeItem('token');
   }
 
   isLoggedIn() {
