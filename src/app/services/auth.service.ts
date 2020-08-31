@@ -28,5 +28,10 @@ export class AuthService {
   isLoggedIn() {
     return tokenNotExpired();
   }
+
+  get currentUser(){
+    let token = localStorage.getItem('token');
+    return new JwtHelper().decodeToken(token);
+  }
 }
 
