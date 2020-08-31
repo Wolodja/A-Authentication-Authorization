@@ -41,6 +41,7 @@ import { NoAccessComponent } from './no-access/no-access.component';
     ])
   ],
   providers: [
+    AUTH_PROVIDERS,
     OrderService,
     AuthService,
     AuthGuard,
